@@ -1,15 +1,17 @@
 package com.sbrms.models.Entities;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.Ignore;
-import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
 
 @Entity(tableName = "addresses")
 public class Address {
     @NonNull
     @PrimaryKey
-    private String addressID;
+    private String addressID = "";
+
     private String apartmentNumber;
     private String streetNumber;
     private String streetName;
@@ -126,7 +128,7 @@ public class Address {
     }
 
 
-    @Override
+    /*@Override
     public String toString() {
         return "Address{" +
                 "addressID='" + addressID + '\'' +
@@ -141,5 +143,5 @@ public class Address {
                 ", addressTypeID='" + addressTypeID + '\'' +
                 ", postalCodeID='" + postalCodeID + '\'' +
                 '}';
-    }
+    }*/
 }

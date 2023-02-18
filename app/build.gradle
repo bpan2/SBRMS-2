@@ -54,7 +54,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    //Room: https://developer.android.com/training/data-storage/room/
+
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    // Room: https://developer.android.com/training/data-storage/room/
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++
     def room_version = "2.5.0"
 
     implementation "androidx.room:room-runtime:$room_version"
@@ -80,7 +83,7 @@ dependencies {
 
     // optional - Guava support for Room, including Optional and ListenableFuture
     //implementation "androidx.room:room-guava:$room_version"
-
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 }
