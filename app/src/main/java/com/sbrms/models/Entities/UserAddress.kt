@@ -1,72 +1,40 @@
-package com.sbrms.models.Entities;
+package com.sbrms.models.Entities
 
-import androidx.annotation.NonNull;
-import androidx.room.Entity;
-import androidx.room.ForeignKey;
-import androidx.room.Ignore;
-import androidx.room.PrimaryKey;
+import androidx.room.Entity
+import androidx.room.ForeignKey
+import androidx.room.Ignore
+import androidx.room.PrimaryKey
+/*
 
-@Entity(foreignKeys = {
-        @ForeignKey(entity = User.class,
-                parentColumns = "employeeID",
-                childColumns = "userID"),
-
-        @ForeignKey(entity = Address.class,
-                parentColumns = "addressID",
-                childColumns = "addressID"),
-}, tableName = "useraddresses")
-
-public class UserAddress {
-    @NonNull
+@Entity(foreignKeys = [ForeignKey(entity = Employee::class,
+    parentColumns = "employeeID",
+    childColumns = "userID"), ForeignKey(entity = Address::class,
+    parentColumns = "addressID",
+    childColumns = "addressID")], tableName = "useraddresses")
+class UserAddress {
     @PrimaryKey
-    private String userAddressID;
-    private String userID;
-    private String addressID;
+    var userAddressID: String = null
+    var userID: String? = null
+    var addressID: String? = null
 
     @Ignore
-    public UserAddress() {
-        setUserAddressID("unknown UserAddressID");
+    constructor() {
+        userAddressID = "unknown UserAddressID"
     }
 
-    public UserAddress(String userAddressID) {
+    constructor(userAddressID: String) {
         if (userAddressID.isEmpty()) {
-            setUserAddressID("unknown UserAddressID");
+            userAddressID = "unknown UserAddressID"
         } else {
-            this.userAddressID = userAddressID;
+            this.userAddressID = userAddressID
         }
     }
 
-    @NonNull
-    public String getUserAddressID() {
-        return userAddressID;
-    }
-
-    public void setUserAddressID(@NonNull String userAddressID) {
-        this.userAddressID = userAddressID;
-    }
-
-    public String getUserID() {
-        return userID;
-    }
-
-    public void setUserID(String userID) {
-        this.userID = userID;
-    }
-
-    public String getAddressID() {
-        return addressID;
-    }
-
-    public void setAddressID(String addressID) {
-        this.addressID = addressID;
-    }
-
-    @Override
-    public String toString() {
+    override fun toString(): String {
         return "UserAddress{" +
                 "userAddressID='" + userAddressID + '\'' +
                 ", userID='" + userID + '\'' +
                 ", addressID='" + addressID + '\'' +
-                '}';
+                '}'
     }
-}
+}*/

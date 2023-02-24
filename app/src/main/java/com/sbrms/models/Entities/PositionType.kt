@@ -1,81 +1,40 @@
-package com.sbrms.models.Entities;
+package com.sbrms.models.Entities
 
+import androidx.room.Entity
+import androidx.room.Ignore
+import androidx.room.PrimaryKey
 
-import androidx.annotation.NonNull;
-import androidx.room.Entity;
-import androidx.room.Ignore;
-import androidx.room.PrimaryKey;
-
+/*
 @Entity(tableName = "positionTypes")
-public class PositionType {
-    @NonNull
+class PositionType {
     @PrimaryKey
-    private String positionTypeID;
-    private String title;
-    private String positionTypeDesc;
-    private int benefitPercentage;
-    private String predefinedAuthorizationID;
+    var positionTypeID: String = null
+    var title: String? = null
+    var positionTypeDesc: String? = null
+    var benefitPercentage = 0
+    var predefinedAuthorizationID: String? = null
 
     @Ignore
-    public PositionType(){
-        setPositionTypeID("unknown positionTypeID");
+    constructor() {
+        positionTypeID = "unknown positionTypeID"
     }
 
-    public PositionType(String positionTypeID, String title){
-        if(positionTypeID.isEmpty()){setPositionTypeID("unknown positionTypeID");}
-        else{this.positionTypeID = positionTypeID;}
-        this.title = title;
+    constructor(positionTypeID: String, title: String?) {
+        if (positionTypeID.isEmpty()) {
+            positionTypeID = "unknown positionTypeID"
+        } else {
+            this.positionTypeID = positionTypeID
+        }
+        this.title = title
     }
 
-    @NonNull
-    public String getPositionTypeID() {
-        return positionTypeID;
-    }
-
-    public void setPositionTypeID(@NonNull String positionTypeID) {
-        this.positionTypeID = positionTypeID;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getPositionTypeDesc() {
-        return positionTypeDesc;
-    }
-
-    public void setPositionTypeDesc(String positionTypeDesc) {
-        this.positionTypeDesc = positionTypeDesc;
-    }
-
-    public int getBenefitPercentage() {
-        return benefitPercentage;
-    }
-
-    public void setBenefitPercentage(int benefitPercentage) {
-        this.benefitPercentage = benefitPercentage;
-    }
-
-    public String getPredefinedAuthorizationID() {
-        return predefinedAuthorizationID;
-    }
-
-    public void setPredefinedAuthorizationID(String predefinedAuthorizationID) {
-        this.predefinedAuthorizationID = predefinedAuthorizationID;
-    }
-
-    @Override
-    public String toString() {
+    override fun toString(): String {
         return "PositionType{" +
                 "positionTypeID='" + positionTypeID + '\'' +
                 ", title='" + title + '\'' +
                 ", positionTypeDesc='" + positionTypeDesc + '\'' +
                 ", benefitPercentage=" + benefitPercentage +
                 ", predefinedAuthorizationID='" + predefinedAuthorizationID + '\'' +
-                '}';
+                '}'
     }
-}
+}*/

@@ -1,135 +1,49 @@
-package com.sbrms.models.Entities;
+package com.sbrms.models.Entities
 
+import androidx.room.Entity
+import androidx.room.Ignore
+import androidx.room.PrimaryKey
 
-import androidx.annotation.NonNull;
-import androidx.room.Entity;
-import androidx.room.Ignore;
-import androidx.room.PrimaryKey;
-
+/*
 @Entity(tableName = "positions")
-public class Position {
-    @NonNull
+class Position {
     @PrimaryKey
-    private String positionID;
-    private String positionType;
-    private String partyID;
-    private String estimatedFromDate;
-    private String actualFromDate;
-    private String thruDate;
-    private String stdWeeklyHrs;
-    private String salaryID;
-    private boolean fullTimeFlag;
-    private boolean partTimeFlag;
-    private boolean tempFlag;
+    var positionID: String = null
+    var positionType: String? = null
+    var partyID: String? = null
+    var estimatedFromDate: String? = null
+    var actualFromDate: String? = null
+    var thruDate: String? = null
+    var stdWeeklyHrs: String? = null
+    var salaryID: String? = null
+    var fullTimeFlag = false
+    var partTimeFlag = false
+    var tempFlag = false
 
     @Ignore
-    public Position(){
-        setPositionID("position notYetAssigned");
+    constructor() {
+        positionID = "position notYetAssigned"
     }
 
-    public Position(String positionID, String positionType, String actualFromDate, String stdWeeklyHrs,  String salaryID){
-        if(positionID.isEmpty()){setPositionID("position notYetAssigned");}
-        else{this.positionID = positionID;}
-
-        this.positionType = positionType;
-        this.actualFromDate = actualFromDate;
-        this.stdWeeklyHrs = stdWeeklyHrs;
-        this.salaryID = salaryID;
+    constructor(
+        positionID: String,
+        positionType: String?,
+        actualFromDate: String?,
+        stdWeeklyHrs: String?,
+        salaryID: String?
+    ) {
+        if (positionID.isEmpty()) {
+            positionID = "position notYetAssigned"
+        } else {
+            this.positionID = positionID
+        }
+        this.positionType = positionType
+        this.actualFromDate = actualFromDate
+        this.stdWeeklyHrs = stdWeeklyHrs
+        this.salaryID = salaryID
     }
 
-    @NonNull
-    public String getPositionID() {
-        return positionID;
-    }
-
-    public void setPositionID(@NonNull String positionID) {
-        this.positionID = positionID;
-    }
-
-    public String getEstimatedFromDate() {
-        return estimatedFromDate;
-    }
-
-    public void setEstimatedFromDate(String estimatedFromDate) {
-        this.estimatedFromDate = estimatedFromDate;
-    }
-
-    public String getActualFromDate() {
-        return actualFromDate;
-    }
-
-    public void setActualFromDate(String actualFromDate) {
-        this.actualFromDate = actualFromDate;
-    }
-
-    public String getSalaryID() {
-        return salaryID;
-    }
-
-    public void setSalaryID(String salaryID) {
-        this.salaryID = salaryID;
-    }
-
-    public boolean getFullTimeFlag() {
-        return fullTimeFlag;
-    }
-
-    public void setFullTimeFlag(boolean fullTimeFlag) {
-        this.fullTimeFlag = fullTimeFlag;
-    }
-
-    public boolean getPartTimeFlag() {
-        return partTimeFlag;
-    }
-
-    public void setPartTimeFlag(boolean partTimeFlag) {
-        this.partTimeFlag = partTimeFlag;
-    }
-
-    public boolean getTempFlag() {
-        return tempFlag;
-    }
-
-    public void setTempFlag(boolean tempFlag) {
-        this.tempFlag = tempFlag;
-    }
-
-
-    public String getThruDate() {
-        return thruDate;
-    }
-
-    public void setThruDate(String thruDate) {
-        this.thruDate = thruDate;
-    }
-
-    public String getStdWeeklyHrs() {
-        return stdWeeklyHrs;
-    }
-
-    public void setStdWeeklyHrs(String stdWeeklyHrs) {
-        this.stdWeeklyHrs = stdWeeklyHrs;
-    }
-
-    public String getPositionType() {
-        return positionType;
-    }
-
-    public void setPositionType(String positionType) {
-        this.positionType = positionType;
-    }
-
-    public String getPartyID() {
-        return partyID;
-    }
-
-    public void setPartyID(String partyID) {
-        this.partyID = partyID;
-    }
-
-
-    @Override
-    public String toString() {
+    override fun toString(): String {
         return "Position{" +
                 "positionID='" + positionID + '\'' +
                 ", positionType='" + positionType + '\'' +
@@ -142,6 +56,6 @@ public class Position {
                 ", fullTimeFlag=" + fullTimeFlag +
                 ", partTimeFlag=" + partTimeFlag +
                 ", tempFlag=" + tempFlag +
-                '}';
+                '}'
     }
-}
+}*/

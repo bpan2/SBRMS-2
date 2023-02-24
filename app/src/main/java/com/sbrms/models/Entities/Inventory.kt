@@ -1,131 +1,49 @@
-package com.sbrms.models.Entities;
 
-import androidx.annotation.NonNull;
-import androidx.room.Entity;
-import androidx.room.Ignore;
-import androidx.room.PrimaryKey;
+package com.sbrms.models.Entities
 
-@Entity(tableName = "inventories")
-public class Inventory {
-    @NonNull
+import androidx.room.Entity
+import androidx.room.Ignore
+import androidx.room.PrimaryKey
+
+/*@Entity(tableName = "inventory_table")
+data class Inventory {
     @PrimaryKey
-    private String inventoryID;
+    var inventoryID: String? = null
+    var sku: String? = null
+    var supplierInventoryID: String? = null
+    var onHandQty = 0
+    var onOrderQty = 0
+    var shelftLocation: String? = null
+    var storageLocation: String? = null
+    var averageMonthlySalesQty = 0
+    var reorderGuideLineID: String? = null
+    var shrinkage = 0
+    var otherDetails: String? = null
 
-    private String sku;
-    private String supplierInventoryID;
-    private int onHandQty;
-    private int onOrderQty;
-    private String shelftLocation;
-    private String storageLocation;
-    private int averageMonthlySalesQty;
-    private String reorderGuideLineID;
-    private int shrinkage;
-    private String otherDetails;
-
-
-    public Inventory(){setInventoryID("Unknown inventory ID");}
+    constructor() {
+        inventoryID = "Unknown inventory ID"
+    }
 
     @Ignore
-    public Inventory(String inventoryID, String sku, String supplierInventoryID, int ohQty, int oQty, String shelfLoc, String storageLoc){
-        this.inventoryID = inventoryID;
-        this.sku = sku;
-        this.supplierInventoryID = supplierInventoryID;
-        this.onHandQty = ohQty;
-        this.onOrderQty = oQty;
-        this.shelftLocation = shelfLoc;
-        this.storageLocation = storageLoc;
+    constructor(
+        inventoryID: String,
+        sku: String?,
+        supplierInventoryID: String?,
+        ohQty: Int,
+        oQty: Int,
+        shelfLoc: String?,
+        storageLoc: String?
+    ) {
+        this.inventoryID = inventoryID
+        this.sku = sku
+        this.supplierInventoryID = supplierInventoryID
+        onHandQty = ohQty
+        onOrderQty = oQty
+        shelftLocation = shelfLoc
+        storageLocation = storageLoc
     }
 
-    public String getInventoryID() {
-        return inventoryID;
-    }
-
-    public void setInventoryID(String inventoryID) {
-        this.inventoryID = inventoryID;
-    }
-
-    public String getSku() {
-        return sku;
-    }
-
-    public void setSku(String sku) {
-        this.sku = sku;
-    }
-
-    public String getSupplierInventoryID() {
-        return supplierInventoryID;
-    }
-
-    public void setSupplierInventoryID(String supplierInventoryID) {
-        this.supplierInventoryID = supplierInventoryID;
-    }
-
-    public int getOnHandQty() {
-        return onHandQty;
-    }
-
-    public void setOnHandQty(int onHandQty) {
-        this.onHandQty = onHandQty;
-    }
-
-    public int getOnOrderQty() {
-        return onOrderQty;
-    }
-
-    public void setOnOrderQty(int onOrderQty) {
-        this.onOrderQty = onOrderQty;
-    }
-
-    public String getShelftLocation() {
-        return shelftLocation;
-    }
-
-    public void setShelftLocation(String shelftLocation) {
-        this.shelftLocation = shelftLocation;
-    }
-
-    public String getStorageLocation() {
-        return storageLocation;
-    }
-
-    public void setStorageLocation(String storageLocation) {
-        this.storageLocation = storageLocation;
-    }
-
-    public int getAverageMonthlySalesQty() {
-        return averageMonthlySalesQty;
-    }
-
-    public void setAverageMonthlySalesQty(int averageMonthlySalesQty) {
-        this.averageMonthlySalesQty = averageMonthlySalesQty;
-    }
-
-    public String getReorderGuideLineID() {
-        return reorderGuideLineID;
-    }
-
-    public void setReorderGuideLineID(String reorderGuideLineID) {
-        this.reorderGuideLineID = reorderGuideLineID;
-    }
-
-    public int getShrinkage() {
-        return shrinkage;
-    }
-
-    public void setShrinkage(int shrinkage) {
-        this.shrinkage = shrinkage;
-    }
-
-    public String getOtherDetails() {
-        return otherDetails;
-    }
-
-    public void setOtherDetails(String otherDetails) {
-        this.otherDetails = otherDetails;
-    }
-
-    @Override
-    public String toString() {
+    override fun toString(): String {
         return "Inventory{" +
                 "inventoryID='" + inventoryID + '\'' +
                 ", sku='" + sku + '\'' +
@@ -138,6 +56,7 @@ public class Inventory {
                 ", reorderGuideLineID='" + reorderGuideLineID + '\'' +
                 ", shrinkage=" + shrinkage +
                 ", otherDetails='" + otherDetails + '\'' +
-                '}';
+                '}'
     }
-}
+}*/
+

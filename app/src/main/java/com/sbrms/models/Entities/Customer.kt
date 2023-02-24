@@ -1,31 +1,14 @@
-package com.sbrms.models.Entities;
+package com.sbrms.models.Entities
 
-
-import androidx.annotation.NonNull;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity(tableName = "customers")
-public class Customer {
-    @NonNull
-    @PrimaryKey
-    private String customerID;
+class Customer internal constructor(@field:PrimaryKey var customerID: String) {
 
-    Customer(String customerID){this.customerID = customerID;};
-
-    @NonNull
-    public String getCustomerID() {
-        return customerID;
-    }
-
-    public void setCustomerID(@NonNull String customerID) {
-        this.customerID = customerID;
-    }
-
-    @Override
-    public String toString() {
+    override fun toString(): String {
         return "Customer{" +
                 "customerID='" + customerID + '\'' +
-                '}';
+                '}'
     }
 }

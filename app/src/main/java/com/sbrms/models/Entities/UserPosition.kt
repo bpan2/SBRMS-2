@@ -1,72 +1,40 @@
-package com.sbrms.models.Entities;
+package com.sbrms.models.Entities
 
-import androidx.annotation.NonNull;
-import androidx.room.Entity;
-import androidx.room.ForeignKey;
-import androidx.room.Ignore;
-import androidx.room.PrimaryKey;
+import androidx.room.Entity
+import androidx.room.ForeignKey
+import androidx.room.Ignore
+import androidx.room.PrimaryKey
 
-@Entity(foreignKeys = {
-        @ForeignKey(entity = User.class,
-                parentColumns = "employeeID",
-                childColumns = "userID"),
-
-        @ForeignKey(entity = Position.class,
-                parentColumns = "positionID",
-                childColumns = "positionID"),
-}, tableName = "userpositions")
-public class UserPosition {
-    @NonNull
+/*
+@Entity(foreignKeys = [ForeignKey(entity = Employee::class,
+    parentColumns = "employeeID",
+    childColumns = "userID"), ForeignKey(entity = Position::class,
+    parentColumns = "positionID",
+    childColumns = "positionID")], tableName = "userpositions")
+class UserPosition {
     @PrimaryKey
-    private String userPositionID;
-    private String userID;
-    private String positionID;
+    var userPositionID: String = null
+    var userID: String? = null
+    var positionID: String? = null
 
     @Ignore
-    public UserPosition(){
-        setUserPositionID("unknown userPositionID");
+    constructor() {
+        userPositionID = "unknown userPositionID"
     }
 
-    public UserPosition(String userPositionID){
-        if(userPositionID.isEmpty()){
-            setUserPositionID("unknown userPositionID");
+    constructor(userPositionID: String) {
+        if (userPositionID.isEmpty()) {
+            userPositionID = "unknown userPositionID"
+        } else {
+            this.userPositionID = userPositionID
         }
-        else{
-            this.userPositionID = userPositionID;
-        }
     }
 
-    @NonNull
-    public String getUserPositionID() {
-        return userPositionID;
-    }
-
-    public void setUserPositionID(@NonNull String userPositionID) {
-        this.userPositionID = userPositionID;
-    }
-
-    public String getUserID() {
-        return userID;
-    }
-
-    public void setUserID(String userID) {
-        this.userID = userID;
-    }
-
-    public String getPositionID() {
-        return positionID;
-    }
-
-    public void setPositionID(String positionID) {
-        this.positionID = positionID;
-    }
-
-    @Override
-    public String toString() {
+    override fun toString(): String {
         return "UserPosition{" +
                 "userPositionID='" + userPositionID + '\'' +
                 ", userID='" + userID + '\'' +
                 ", positionID='" + positionID + '\'' +
-                '}';
+                '}'
     }
-}
+}*/

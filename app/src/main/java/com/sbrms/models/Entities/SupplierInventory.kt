@@ -1,115 +1,34 @@
-package com.sbrms.models.Entities;
+package com.sbrms.models.Entities
 
-import androidx.annotation.NonNull;
-import androidx.room.Entity;
-import androidx.room.Ignore;
-import androidx.room.PrimaryKey;
+import androidx.room.Entity
+import androidx.room.Ignore
+import androidx.room.PrimaryKey
 
+/*
 @Entity(tableName = "supplierInventories")
-public class SupplierInventory {
-    @NonNull
+class SupplierInventory {
     @PrimaryKey
-    private String supplierInventoryID;
-
-    private int totalQtySuppliedToDate;
-    private String firstItemSuppliedDate;
-    private String lastItemSuppliedDate;
-    private String deliveryLeadTime;
-    private double standardPrice;
-    private double discountPercentage;
-    private int minOrderQty;
-    private int maxOrderQty;
-    private String otherDetails;
+    var supplierInventoryID: String = null
+    var totalQtySuppliedToDate = 0
+    var firstItemSuppliedDate: String? = null
+    var lastItemSuppliedDate: String? = null
+    var deliveryLeadTime: String? = null
+    var standardPrice = 0.0
+    var discountPercentage = 0.0
+    var minOrderQty = 0
+    var maxOrderQty = 0
+    var otherDetails: String? = null
 
     @Ignore
-    SupplierInventory() {setSupplierInventoryID("Unknown supplier-inventory ID");}
-    SupplierInventory(String supplierInventoryID){
-        this.supplierInventoryID = supplierInventoryID;
+    internal constructor() {
+        supplierInventoryID = "Unknown supplier-inventory ID"
     }
 
-    public String getSupplierInventoryID() {
-        return supplierInventoryID;
+    internal constructor(supplierInventoryID: String) {
+        this.supplierInventoryID = supplierInventoryID
     }
 
-    public void setSupplierInventoryID(String supplierInventoryID) {
-        this.supplierInventoryID = supplierInventoryID;
-    }
-
-    public int getTotalQtySuppliedToDate() {
-        return totalQtySuppliedToDate;
-    }
-
-    public void setTotalQtySuppliedToDate(int totalQtySuppliedToDate) {
-        this.totalQtySuppliedToDate = totalQtySuppliedToDate;
-    }
-
-    public String getFirstItemSuppliedDate() {
-        return firstItemSuppliedDate;
-    }
-
-    public void setFirstItemSuppliedDate(String firstItemSuppliedDate) {
-        this.firstItemSuppliedDate = firstItemSuppliedDate;
-    }
-
-    public String getLastItemSuppliedDate() {
-        return lastItemSuppliedDate;
-    }
-
-    public void setLastItemSuppliedDate(String lastItemSuppliedDate) {
-        this.lastItemSuppliedDate = lastItemSuppliedDate;
-    }
-
-    public String getDeliveryLeadTime() {
-        return deliveryLeadTime;
-    }
-
-    public void setDeliveryLeadTime(String deliveryLeadTime) {
-        this.deliveryLeadTime = deliveryLeadTime;
-    }
-
-    public double getStandardPrice() {
-        return standardPrice;
-    }
-
-    public void setStandardPrice(double standardPrice) {
-        this.standardPrice = standardPrice;
-    }
-
-    public double getDiscountPercentage() {
-        return discountPercentage;
-    }
-
-    public void setDiscountPercentage(double discountPercentage) {
-        this.discountPercentage = discountPercentage;
-    }
-
-    public int getMinOrderQty() {
-        return minOrderQty;
-    }
-
-    public void setMinOrderQty(int minOrderQty) {
-        this.minOrderQty = minOrderQty;
-    }
-
-    public int getMaxOrderQty() {
-        return maxOrderQty;
-    }
-
-    public void setMaxOrderQty(int maxOrderQty) {
-        this.maxOrderQty = maxOrderQty;
-    }
-
-    public String getOtherDetails() {
-        return otherDetails;
-    }
-
-    public void setOtherDetails(String otherDetails) {
-        this.otherDetails = otherDetails;
-    }
-
-
-    @Override
-    public String toString() {
+    override fun toString(): String {
         return "SupplierInventory{" +
                 "supplierInventoryID='" + supplierInventoryID + '\'' +
                 ", totalQtySuppliedToDate=" + totalQtySuppliedToDate +
@@ -121,6 +40,6 @@ public class SupplierInventory {
                 ", minOrderQty=" + minOrderQty +
                 ", maxOrderQty=" + maxOrderQty +
                 ", otherDetails='" + otherDetails + '\'' +
-                '}';
+                '}'
     }
-}
+}*/
