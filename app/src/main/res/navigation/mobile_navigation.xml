@@ -27,4 +27,14 @@
         android:name="com.sbrms.ui.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.sbrms.ui.registration.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
+    <fragment
+        android:id="@+id/sendTmpPassowrdFragment"
+        android:name="com.sbrms.ui.login.SendTmpPassowrdFragment"
+        android:label="fragment_send_tmp_passowrd"
+        tools:layout="@layout/fragment_send_tmp_passowrd" />
 </navigation>
