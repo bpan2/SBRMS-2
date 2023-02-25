@@ -5,6 +5,7 @@ import androidx.room.Entity
 import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
+import java.text.DateFormat
 
 @Entity(tableName = "employee_table")
 @Parcelize
@@ -17,10 +18,10 @@ data class Employee(
     val password: String?,
     val phoneNumber: String?,
     val email: String?,
-    val registrationDateID: String?,
-    val startingDateID: String?,
-    val userAddressID: String?,
-    val postalCodeID: String?,
+    val registrationDate: Long = System.currentTimeMillis(),
+    val startingDate: String?,
+    val userAddress: String?,
+    val postalCode: String?,
     val isOwner: Boolean = false,
     val isAdmin: Boolean = false,
     val isSalesStaff: Boolean = false,
@@ -29,20 +30,6 @@ data class Employee(
     val isPurchasingStaff: Boolean = false,
     val isAccountingStaff: Boolean = false,
 ) : Parcelable {
-    override fun toString(): String {
-        return "Employee{" +
-                "employeeID='" + employeeID + '\'' +
-                ", userName='" + userName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", password='" + password + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
-                ", registrationDateID='" + registrationDateID + '\'' +
-                ", startingDateID='" + startingDateID + '\'' +
-                ", userAddressID='" + userAddressID + '\'' +
-                ", postalCodeID='" + postalCodeID + '\'' +
-                '}'
-
-    }
+   val registrationDateFormatted: String
+    get() = DateFormat.getDateTimeInstance().format(registrationDate)
 }
