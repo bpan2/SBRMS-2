@@ -1,13 +1,20 @@
 package com.sbrms.models.Entities
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.Ignore
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
-/*
-@Entity(tableName = "suppliers")
-class Supplier {
-    @PrimaryKey
+
+@Entity(tableName = "supplier_table")
+@Parcelize
+data class Supplier (
+    @PrimaryKey(autoGenerate = true)
+    val supplierID: Int = 0,
+
+        )  : Parcelable {
+/*    @PrimaryKey
     var supplierID: String = null
     var supplierInventoryID: String? = null
     var companyName: String? = null
@@ -41,5 +48,5 @@ class Supplier {
                 ", preferenceType='" + preferenceType + '\'' +
                 ", ratingType='" + ratingType + '\'' +
                 '}'
-    }
-}*/
+    }*/
+}

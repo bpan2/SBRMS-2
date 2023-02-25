@@ -1,73 +1,35 @@
 package com.sbrms.models.Entities
 
+import android.os.Parcelable
 import androidx.room.Entity
-import androidx.room.Ignore
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
-/*@Entity(tableName = "product_table")
+@Entity(tableName = "product_table")
+@Parcelize
+data class Product(
+    @PrimaryKey(autoGenerate = true)
+    val productID: Int = 0,
+    val SKU: String?,
+    val UPC: String?,
+    val productName: String?,
+    val productDescription: String?,
+    val productCategoryID: String?,
+    val unitPrice: Price?,
+    val onHandQty: Int = 0,
+    val brand: Brand?,
+    val model: String?,
+    val defaultUnitOfMeasurementID: UnitOfMeasurement?,
+    val packaging: Packaging,
+    val introductionDate: String?,
+    val salesDiscontinuationDate: String?,
+    val expirationDate: String?,
+    val manufacturer: Manufacturer?,
+    val supplier: Supplier?
 
-class Product {
-    @PrimaryKey
-    var productID: String = null
-    var upc: String? = null
-    var sku: String? = null
-    var price: String? = null
-    var onHandQty: String? = null
-    var brand: String? = null
-    var model: String? = null
-    var unitOfMeasurementID: String? = null
-    var productCategoryID: String? = null
-    var productDesc: String? = null
-    var introductionDateID: String? = null
-    var salesDiscontinuationDateID: String? = null
-    var expirationDateID: String? = null
-    var manufacturerID: String? = null
-    var supplierID: String? = null
+) : Parcelable{
 
-    @Ignore
-    constructor() {
-        productID = "Unknown product ID"
-    }
-
-    constructor(
-        productID: String,
-        upc: String?,
-        sku: String?,
-        price: String?,
-        onHandQty: String?,
-        brand: String?,
-        model: String?,
-        unitOfMeasurementID: String?,
-        productCategoryID: String?,
-        productDesc: String?,
-        introductionDateID: String?,
-        salesDiscontinuationDateID: String?,
-        expirationDateID: String?,
-        manufacturerID: String?,
-        supplierID: String?
-    ) {
-        if (productID.trim { it <= ' ' }.isEmpty()) {
-            this.productID = "999999"
-        } else {
-            this.productID = productID
-        }
-        this.upc = upc
-        this.sku = sku
-        this.price = price
-        this.onHandQty = onHandQty
-        this.brand = brand
-        this.model = model
-        this.unitOfMeasurementID = unitOfMeasurementID
-        this.productCategoryID = productCategoryID
-        this.productDesc = productDesc
-        this.introductionDateID = introductionDateID
-        this.salesDiscontinuationDateID = salesDiscontinuationDateID
-        this.expirationDateID = expirationDateID
-        this.manufacturerID = manufacturerID
-        this.supplierID = supplierID
-    }
-
-    override fun toString(): String {
+    /*override fun toString(): String {
         return "Product{" +
                 "productID='" + productID + '\'' +
                 ", upc='" + upc + '\'' +
@@ -85,5 +47,5 @@ class Product {
                 ", manufacturerID='" + manufacturerID + '\'' +
                 ", supplierID='" + supplierID + '\'' +
                 '}'
-    }
-}*/
+    }*/
+}
