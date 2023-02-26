@@ -8,11 +8,13 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.sbrms.R
 import com.sbrms.databinding.FragmentLoginBinding
 import com.sbrms.databinding.FragmentSlideshowBinding
+import com.sbrms.ui.home.HomeFragment
 import com.sbrms.ui.slideshow.SlideshowViewModel
 
-class LoginFragment : Fragment(){
+class LoginFragment : Fragment(R.layout.fragment_login){
     private var _binding: FragmentLoginBinding? = null
 
     // This property is only valid between onCreateView and
@@ -27,12 +29,14 @@ class LoginFragment : Fragment(){
         //disable the display of up-button on Login Screen's Action Bar
         (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
 
-        val slideshowViewModel =
-            ViewModelProvider(this).get(SlideshowViewModel::class.java)
-
-
+        val slideshowViewModel = ViewModelProvider(this).get(SlideshowViewModel::class.java)
 
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
+
+        binding.login.setOnClickListener{
+            //val action = HomeFragmentDicr
+        }
+
         val root: View = binding.root
 
        /* val textView: TextView = binding.textSlideshow
