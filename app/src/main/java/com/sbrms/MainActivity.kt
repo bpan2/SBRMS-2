@@ -32,7 +32,36 @@ class MainActivity : AppCompatActivity() {
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
+
+        /*
+        https://stackoverflow.com/questions/51173002/how-to-change-start-destination-of-a-navigation-graph-programmatically
+        val navController = findNavController(R.id.nav_host_fragment)
+        if (condition) {
+            navController.setGraph(R.navigation.nav_graph_first)
+        } else {
+            navController.setGraph(R.navigation.nav_graph_second)
+        }
+
+
+
+        val nextDestination = if (loginSuccess) {
+                R.id.action_Dashboard
+            } else {
+                R.id.action_NotAuthorized
+            }
+
+        val options = NavOptions.Builder()
+            .setPopUpTo(R.id.loginParentFragment, true)
+            .build()
+
+        findNavController().navigate(nextDestination, null, options)
+
+         */
+
+
         val navController = findNavController(R.id.nav_host_fragment_content_main)
+        navController.setGraph(R.navigation.mobile_navigation)
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(setOf(

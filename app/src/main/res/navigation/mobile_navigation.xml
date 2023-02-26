@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/nav_home"
         android:name="com.sbrms.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
+
+
         <action
             android:id="@+id/action_nav_home_to_nav_gallery"
             app:destination="@id/nav_gallery" />
@@ -20,6 +22,7 @@
         android:name="com.sbrms.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" >
+
         <action
             android:id="@+id/action_nav_gallery_to_nav_slideshow"
             app:destination="@id/nav_slideshow" />
@@ -44,15 +47,25 @@
         <action
             android:id="@+id/action_loginFragment_to_nav_home"
             app:destination="@id/nav_home" />
+
+
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
         android:name="com.sbrms.ui.registration.RegistrationFragment"
         android:label="fragment_registration"
-        tools:layout="@layout/fragment_registration" />
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/sendTmpPassowrdFragment"
         android:name="com.sbrms.ui.login.SendTmpPassowrdFragment"
         android:label="fragment_send_tmp_passowrd"
-        tools:layout="@layout/fragment_send_tmp_passowrd" />
+        tools:layout="@layout/fragment_send_tmp_passowrd" >
+        <action
+            android:id="@+id/action_sendTmpPassowrdFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 </navigation>
