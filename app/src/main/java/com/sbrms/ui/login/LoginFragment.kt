@@ -8,10 +8,12 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.sbrms.R
 import com.sbrms.databinding.FragmentLoginBinding
 import com.sbrms.databinding.FragmentSlideshowBinding
 import com.sbrms.ui.home.HomeFragment
+import com.sbrms.ui.home.HomeFragmentDirections
 import com.sbrms.ui.slideshow.SlideshowViewModel
 
 class LoginFragment : Fragment(R.layout.fragment_login){
@@ -34,8 +36,11 @@ class LoginFragment : Fragment(R.layout.fragment_login){
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
 
         binding.login.setOnClickListener{
-            //val action = HomeFragmentDicr
+            val action = LoginFragmentDirections.actionLoginFragmentToNavHome()
+            findNavController().navigate(action)
         }
+
+
 
         val root: View = binding.root
 
