@@ -73,6 +73,7 @@ dependencies {
     testImplementation "androidx.room:room-testing:$room_version"
     // optional - Paging 3 Integration
     implementation "androidx.room:room-paging:$room_version"
+    implementation 'com.google.zxing:core:3.3.0'
 
     //commented out due to error: "Could not get unknown property 'ksp_version' for object of type org.gradle.plugin.use.internal.PluginRequestCollector$PluginDependenciesSpecImpl."
     // To use Kotlin Symbol Processing (KSP)
