@@ -6,9 +6,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.sbrms.R
+import com.sbrms.databinding.FragmentLoginBinding
+import com.sbrms.databinding.FragmentRegistrationBinding
+import com.sbrms.ui.login.LoginFragmentDirections
 
-class RegistrationFragment : Fragment() {
+class RegistrationFragment : Fragment(R.layout.fragment_registration) {
+    private var _binding: FragmentRegistrationBinding? = null
+
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
 
     companion object {
         fun newInstance() = RegistrationFragment()
@@ -20,7 +29,18 @@ class RegistrationFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        return inflater.inflate(R.layout.fragment_registration, container, false)
+        _binding = FragmentRegistrationBinding.inflate(inflater, container, false)
+
+        binding.signUpButton.setOnClickListener{
+            val action = RegistrationFragmentDirections.actionRegistrationFragmentToLoginFragment()
+            findNavController().navigate(action)
+        }
+
+        val root: View = binding.root
+
+        return root
+
+        //return inflater.inflate(R.layout.fragment_registration, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
