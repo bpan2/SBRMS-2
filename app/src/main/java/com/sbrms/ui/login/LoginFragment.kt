@@ -35,20 +35,35 @@ class LoginFragment : Fragment(R.layout.fragment_login){
 
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
 
-        binding.signIn.setOnClickListener{
+        binding.signInButton.setOnClickListener{
             val action = LoginFragmentDirections.actionLoginFragmentToNavHome()
             findNavController().navigate(action)
         }
 
-        binding.register.setOnClickListener {
+
+        binding.logInPageRegisterButton.setOnClickListener {
             val action = LoginFragmentDirections.actionLoginFragmentToRegistrationFragment()
             findNavController().navigate(action)
         }
 
+        binding.forgotYourPasswordButton.setOnClickListener {
+            val action = LoginFragmentDirections.actionLoginFragmentToSendTmpPassowrdFragment()
+            findNavController().navigate(action)
+        }
+
+        /*binding.signInButton.setOnClickListener{
+            val action = LoginFragmentDirections.actionLoginFragmentToNavHome()
+            findNavController().navigate(action)
+        }
+        binding.register.setOnClickListener {
+            val action = LoginFragmentDirections.actionLoginFragmentToRegistrationFragment()
+            findNavController().navigate(action)
+        }
         binding.forgotPassword.setOnClickListener {
             val action = LoginFragmentDirections.actionLoginFragmentToSendTmpPassowrdFragment()
             findNavController().navigate(action)
         }
+        */
 
         val root: View = binding.root
 
