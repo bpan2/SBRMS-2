@@ -1,7 +1,9 @@
 package com.sbrms
 
+import android.app.ProgressDialog.show
 import android.os.Bundle
 import android.view.Menu
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -24,7 +26,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+
         setSupportActionBar(binding.appBarMain.toolbar)
+
+        //getSupportActionBar()?.setDisplayHomeAsUpEnabled(false)
+        //getSupportActionBar()?.setDisplayShowHomeEnabled(false)
 
         binding.appBarMain.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -65,7 +72,15 @@ class MainActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(setOf(
-            R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.receivingFragment, R.id.salesFragment, R.id.returnedFragment, R.id.employeeFragment, R.id.loginFragment), drawerLayout)
+            R.id.nav_home,
+            R.id.nav_gallery,
+            R.id.nav_slideshow,
+            R.id.receivingFragment,
+            R.id.salesFragment,
+            R.id.returnedFragment,
+            R.id.employeeFragment,
+            R.id.loginFragment),
+            drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
@@ -79,5 +94,18 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+
+    override fun onBackPressed() {
+
+        // To execute back press
+        // super.onBackPressed()
+
+        // To do something else
+
+
+        Snackbar.make(binding.root, "Please use hamburger button", Snackbar.LENGTH_SHORT).show()
+        //Toast.makeText(applicationContext, "Please use hamburger button", Toast.LENGTH_SHORT).show()
     }
 }
