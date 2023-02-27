@@ -103,9 +103,7 @@ class MainActivity : AppCompatActivity() {
         // super.onBackPressed()
 
         // To do something else
-
-
-        Snackbar.make(binding.root, "Please use hamburger button", Snackbar.LENGTH_SHORT).show()
+        Snackbar.make(binding.root, "Please use the hamburger button", Snackbar.LENGTH_SHORT).show()
         //Toast.makeText(applicationContext, "Please use hamburger button", Toast.LENGTH_SHORT).show()
     }
 }

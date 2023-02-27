@@ -1,4 +1,4 @@
-package com.sbrms.models.Entities
+package com.sbrms.data.model
 
 import android.os.Parcelable
 import androidx.room.Entity

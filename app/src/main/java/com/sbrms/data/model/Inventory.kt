@@ -1,5 +1,5 @@
 
-package com.sbrms.models.Entities
+package com.sbrms.data.model
 
 import androidx.room.Entity
 import androidx.room.Ignore
