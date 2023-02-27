@@ -21,4 +21,9 @@
     <string name="login_failed">"Login failed"</string>
     <string name="action_register">Register</string>
     <string name="action_forgotPassword">Forgot Password</string>
+    <string name="receiving">Receiving</string>
+    <string name="profile">Profile</string>
+    <string name="returned">Returned</string>
+    <string name="sales">Sales</string>
+    <string name="logout">Log Out</string>
 </resources>

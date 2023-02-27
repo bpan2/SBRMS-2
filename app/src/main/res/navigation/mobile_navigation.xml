@@ -12,18 +12,7 @@
         tools:layout="@layout/fragment_home" >
 
 
-        <action
-            android:id="@+id/action_nav_home_to_receivingFragment"
-            app:destination="@id/receivingFragment" />
-        <action
-            android:id="@+id/action_nav_home_to_salesFragment"
-            app:destination="@id/salesFragment" />
-        <action
-            android:id="@+id/action_nav_home_to_returnedFragment"
-            app:destination="@id/returnedFragment" />
-        <action
-            android:id="@+id/action_nav_home_to_historyFragment"
-            app:destination="@id/historyFragment" />
+
     </fragment>
 
     <fragment
@@ -82,7 +71,9 @@
         android:id="@+id/receivingFragment"
         android:name="com.sbrms.ui.receiving.ReceivingFragment"
         android:label="fragment_receiving"
-        tools:layout="@layout/fragment_receiving" />
+        tools:layout="@layout/fragment_receiving" >
+
+    </fragment>
     <fragment
         android:id="@+id/salesFragment"
         android:name="com.sbrms.ui.sales.SalesFragment"
@@ -104,4 +95,9 @@
         android:label="fragment_history"
         tools:layout="@layout/fragment_history" />
     <action android:id="@+id/action_global_searchFragment" app:destination="@id/searchFragment" />
+    <fragment
+        android:id="@+id/employeeFragment"
+        android:name="com.sbrms.ui.employee.EmployeeFragment"
+        android:label="fragment_employee"
+        tools:layout="@layout/fragment_employee" />
 </navigation>
