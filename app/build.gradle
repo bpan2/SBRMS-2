@@ -5,6 +5,7 @@ plugins {
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
     id 'androidx.navigation.safeargs'
+    id 'com.google.dagger.hilt.android'
 
 
     //id 'dagger.hilt.android.plugin'
@@ -41,6 +42,8 @@ android {
     buildFeatures {
         viewBinding true
     }
+
+
 }
 
 dependencies {
@@ -143,4 +146,17 @@ dependencies {
     kapt 'com.google.dagger:dagger-compiler:2.45'
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    //Hilt: https://developer.android.com/training/dependency-injection/hilt-android
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-compiler:2.44"
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes true
 }
