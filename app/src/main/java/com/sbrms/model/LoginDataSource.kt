@@ -1,6 +1,6 @@
-package com.sbrms.data
+package com.sbrms.model
 
-import com.sbrms.data.model.LoggedInUser
+import com.sbrms.model.entity.LoggedInUser
 import java.io.IOException
 
 /**

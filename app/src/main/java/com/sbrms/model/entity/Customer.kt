@@ -1,4 +1,4 @@
-package com.sbrms.data.model
+package com.sbrms.model.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

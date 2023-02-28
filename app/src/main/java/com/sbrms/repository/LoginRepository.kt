@@ -1,9 +1,11 @@
-package com.sbrms.data
+package com.sbrms.repository
 
-import com.sbrms.data.model.LoggedInUser
+import com.sbrms.model.LoginDataSource
+import com.sbrms.model.Result
+import com.sbrms.model.entity.LoggedInUser
 
 /**
- * Class that requests authentication and user information from the remote data source and
+ * Class that requests authentication and user information from the remote models source and
  * maintains an in-memory cache of login status and user credentials information.
  */
 

@@ -1,7 +1,7 @@
-package com.sbrms.data.dao
+package com.sbrms.model.dao
 
 import androidx.room.*
-import com.sbrms.data.model.Employee
+import com.sbrms.model.entity.Employee
 import kotlinx.coroutines.flow.Flow
 
 @Dao

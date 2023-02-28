@@ -1,12 +1,8 @@
 
-package com.sbrms.data.model
-
-import androidx.room.Entity
-import androidx.room.Ignore
-import androidx.room.PrimaryKey
+package com.sbrms.model.entity
 
 /*@Entity(tableName = "inventory_table")
-data class Inventory {
+models class Inventory {
     @PrimaryKey
     var inventoryID: String? = null
     var sku: String? = null

@@ -1,4 +1,4 @@
-package com.sbrms.data.model
+package com.sbrms.model.entity
 
 /**
  * Data class that captures user information for logged in users retrieved from LoginRepository

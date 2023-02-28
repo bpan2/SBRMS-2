@@ -2,8 +2,8 @@ package com.sbrms.ui.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.sbrms.data.LoginDataSource
-import com.sbrms.data.LoginRepository
+import com.sbrms.model.LoginDataSource
+import com.sbrms.repository.LoginRepository
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.

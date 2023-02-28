@@ -1,9 +1,4 @@
-package com.sbrms.data.model
-
-import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.Ignore
-import androidx.room.PrimaryKey
+package com.sbrms.model.entity
 
 /*
 @Entity(foreignKeys = [ForeignKey(entity = Employee::class,

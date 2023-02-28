@@ -1,4 +1,4 @@
-package com.sbrms.data.model
+package com.sbrms.model.entity
 
 import android.os.Parcelable
 import androidx.room.Entity
@@ -38,7 +38,7 @@ data class Product(
                 ", price='" + price + '\'' +
                 ", onHandQty='" + onHandQty + '\'' +
                 ", brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
+                ", entities='" + entities + '\'' +
                 ", unitOfMeasurementID='" + unitOfMeasurementID + '\'' +
                 ", productCategoryID='" + productCategoryID + '\'' +
                 ", productDesc='" + productDesc + '\'' +

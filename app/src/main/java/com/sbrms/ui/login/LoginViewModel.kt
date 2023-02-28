@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
-import com.sbrms.data.LoginRepository
-import com.sbrms.data.Result
+import com.sbrms.repository.LoginRepository
+import com.sbrms.model.Result
 
 import com.sbrms.R
 
