@@ -30,7 +30,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/userTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -104,7 +104,8 @@
                             android:text="10 Products"
                             android:textAlignment="center"
                             android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:layout_marginBottom="5dp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -141,7 +142,8 @@
                             android:text="$145.70"
                             android:textAlignment="center"
                             android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:layout_marginBottom="5dp"/>
 
                     </LinearLayout>
                 </LinearLayout>
@@ -187,7 +189,8 @@
                             android:text="10 Products"
                             android:textAlignment="center"
                             android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:layout_marginBottom="5dp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -224,7 +227,8 @@
                             android:text="$145.70"
                             android:textAlignment="center"
                             android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:layout_marginBottom="5dp"/>
 
                     </LinearLayout>
                 </LinearLayout>
@@ -274,6 +278,7 @@
                     android:layout_marginTop="16dp"
                     android:background="@drawable/background_dashboard_items"
                     android:text="Button"
+                    android:layout_marginBottom="16dp"
                     android:textSize="16sp" />
 
 

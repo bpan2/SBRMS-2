@@ -3,16 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/barcodeGeneratorFragment">
+
+    <fragment
+        android:id="@+id/barcodeGeneratorFragment"
+        android:name="com.sbrms.ui.barcodeGenerator.BarcodeGeneratorFragment"
+        android:label="fragment_barcode_generator"
+        tools:layout="@layout/fragment_barcode_generator"
+        />
 
     <fragment
         android:id="@+id/nav_home"
         android:name="com.sbrms.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_nav_home_to_nav_gallery"
-            app:destination="@id/nav_gallery" />
+
     </fragment>
 
     <fragment
@@ -20,9 +25,7 @@
         android:name="com.sbrms.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" >
-        <action
-            android:id="@+id/action_nav_gallery_to_nav_slideshow"
-            app:destination="@id/nav_slideshow" />
+
     </fragment>
 
     <fragment
@@ -44,15 +47,63 @@
         <action
             android:id="@+id/action_loginFragment_to_nav_home"
             app:destination="@id/nav_home" />
+
+
     </fragment>
+
     <fragment
         android:id="@+id/registrationFragment"
         android:name="com.sbrms.ui.registration.RegistrationFragment"
         android:label="fragment_registration"
-        tools:layout="@layout/fragment_registration" />
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/sendTmpPassowrdFragment"
         android:name="com.sbrms.ui.login.SendTmpPassowrdFragment"
         android:label="fragment_send_tmp_passowrd"
-        tools:layout="@layout/fragment_send_tmp_passowrd" />
+        tools:layout="@layout/fragment_send_tmp_passowrd" >
+        <action
+            android:id="@+id/action_sendTmpPassowrdFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/receivingFragment"
+        android:name="com.sbrms.ui.receiving.ReceivingFragment"
+        android:label="fragment_receiving"
+        tools:layout="@layout/fragment_receiving" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/salesFragment"
+        android:name="com.sbrms.ui.sales.SalesFragment"
+        android:label="fragment_sales"
+        tools:layout="@layout/fragment_sales" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.sbrms.ui.searching.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/returnedFragment"
+        android:name="com.sbrms.ui.returned.ReturnedFragment"
+        android:label="fragment_returned"
+        tools:layout="@layout/fragment_returned" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.sbrms.ui.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <action android:id="@+id/action_global_searchFragment" app:destination="@id/searchFragment" />
+    <fragment
+        android:id="@+id/employeeFragment"
+        android:name="com.sbrms.ui.employee.EmployeeFragment"
+        android:label="fragment_employee"
+        tools:layout="@layout/fragment_employee" />
 </navigation>
