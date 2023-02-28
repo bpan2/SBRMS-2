@@ -1,11 +1,6 @@
-package com.sbrms.model.entity
+package com.sbrms.model.entity.backup
 
-import android.os.Parcelable
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-import kotlinx.parcelize.Parcelize
-
-
+/*
 @Entity(tableName = "packaging_table")
 @Parcelize
 data class Packaging(
@@ -18,4 +13,4 @@ data class Packaging(
     val qtyPerPackage: Int = 1
 ) : Parcelable {
 
-}
+}*/
