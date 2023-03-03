@@ -11,6 +11,9 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
 
+        <action
+            android:id="@+id/action_nav_home_to_barcodGeneratorFragment"
+            app:destination="@id/barcodGeneratorFragment" />
     </fragment>
 
     <fragment
@@ -98,4 +101,15 @@
         android:name="com.sbrms.ui.employee.EmployeeFragment"
         android:label="fragment_employee"
         tools:layout="@layout/fragment_employee" />
+    <fragment
+        android:id="@+id/barcodGeneratorFragment"
+        android:name="com.sbrms.BarcodGeneratorFragment"
+        android:label="fragment_barcod_generator"
+        tools:layout="@layout/fragment_barcod_generator" >
+        <action
+            android:id="@+id/action_barcodGeneratorFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+
 </navigation>

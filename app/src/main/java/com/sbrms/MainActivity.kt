@@ -26,8 +26,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
         setSupportActionBar(binding.appBarMain.toolbar)
 
         //getSupportActionBar()?.setDisplayHomeAsUpEnabled(false)
@@ -49,8 +47,6 @@ class MainActivity : AppCompatActivity() {
             navController.setGraph(R.navigation.nav_graph_second)
         }
 
-
-
         val nextDestination = if (loginSuccess) {
                 R.id.action_Dashboard
             } else {
@@ -62,7 +58,6 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         findNavController().navigate(nextDestination, null, options)
-
          */
 
 
