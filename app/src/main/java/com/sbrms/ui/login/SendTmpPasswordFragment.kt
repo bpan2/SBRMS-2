@@ -8,10 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.sbrms.R
 
-class SendTmpPassowrdFragment : Fragment() {
+class SendTmpPasswordFragment : Fragment() {
 
     companion object {
-        fun newInstance() = SendTmpPassowrdFragment()
+        fun newInstance() = SendTmpPasswordFragment()
     }
 
     private lateinit var viewModel: SendTmpPassowrdViewModel
@@ -20,7 +20,7 @@ class SendTmpPassowrdFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        return inflater.inflate(R.layout.fragment_send_tmp_passowrd, container, false)
+        return inflater.inflate(R.layout.fragment_send_tmp_password, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

@@ -4,14 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.sbrms.R
 import com.sbrms.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment(R.layout.fragment_barcod_generator) {
+class HomeFragment : Fragment(R.layout.fragment_barcode_generator) {
 
     private var _binding: FragmentHomeBinding? = null
 
@@ -31,7 +30,7 @@ class HomeFragment : Fragment(R.layout.fragment_barcod_generator) {
 
 
         binding.generateLocalUPCBtn.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavHomeToBarcodGeneratorFragment()
+            val action = HomeFragmentDirections.actionNavHomeToBarcodeGeneratorFragment()
             findNavController().navigate(action)
         }
         val root: View = binding.root

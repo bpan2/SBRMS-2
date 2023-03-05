@@ -1,4 +1,4 @@
-package com.sbrms
+package com.sbrms.utilities.barcodegenerator
 
 import android.graphics.Bitmap
 import android.graphics.Color
@@ -12,10 +12,10 @@ import com.google.zxing.BarcodeFormat
 import com.google.zxing.MultiFormatWriter
 import com.google.zxing.WriterException
 import com.google.zxing.common.BitMatrix
-import com.sbrms.databinding.FragmentBarcodGeneratorBinding
+import com.sbrms.databinding.FragmentBarcodeGeneratorBinding
 
-class BarcodGeneratorFragment : Fragment() {
-    private var _binding: FragmentBarcodGeneratorBinding? = null
+class BarcodeGeneratorFragment : Fragment() {
+    private var _binding: FragmentBarcodeGeneratorBinding? = null
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -27,7 +27,7 @@ class BarcodGeneratorFragment : Fragment() {
     ): View? {
 
         val multiFormatWriter = MultiFormatWriter()
-        _binding = FragmentBarcodGeneratorBinding.inflate(inflater, container, false)
+        _binding = FragmentBarcodeGeneratorBinding.inflate(inflater, container, false)
 
         binding.generateButton.setOnClickListener{
             try {
@@ -65,8 +65,8 @@ class BarcodGeneratorFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(): BarcodGeneratorFragment {
-            return BarcodGeneratorFragment()
+        fun newInstance(): BarcodeGeneratorFragment {
+            return BarcodeGeneratorFragment()
         }
     }
 

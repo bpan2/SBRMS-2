@@ -1,4 +1,4 @@
-package com.sbrms
+package com.sbrms.utilities.barcodegenerator
 
 import androidx.lifecycle.ViewModel
 

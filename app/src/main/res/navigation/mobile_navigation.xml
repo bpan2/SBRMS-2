@@ -12,8 +12,11 @@
         tools:layout="@layout/fragment_home" >
 
         <action
-            android:id="@+id/action_nav_home_to_barcodGeneratorFragment"
-            app:destination="@id/barcodGeneratorFragment" />
+            android:id="@+id/action_nav_home_to_barcodeGeneratorFragment"
+            app:destination="@id/barcodeGeneratorFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 
     <fragment
@@ -29,6 +32,7 @@
         android:name="com.sbrms.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.sbrms.ui.login.LoginFragment"
@@ -38,8 +42,8 @@
             android:id="@+id/action_loginFragment_to_registrationFragment"
             app:destination="@id/registrationFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_sendTmpPassowrdFragment"
-            app:destination="@id/sendTmpPassowrdFragment" />
+            android:id="@+id/action_loginFragment_to_sendTmpPasswordFragment"
+            app:destination="@id/sendTmpPasswordFragment" />
         <action
             android:id="@+id/action_loginFragment_to_nav_home"
             app:destination="@id/nav_home" />
@@ -58,12 +62,12 @@
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
-        android:id="@+id/sendTmpPassowrdFragment"
-        android:name="com.sbrms.ui.login.SendTmpPassowrdFragment"
-        android:label="fragment_send_tmp_passowrd"
-        tools:layout="@layout/fragment_send_tmp_passowrd" >
+        android:id="@+id/sendTmpPasswordFragment"
+        android:name="com.sbrms.ui.login.SendTmpPasswordFragment"
+        android:label="fragment_send_tmp_password"
+        tools:layout="@layout/fragment_send_tmp_password" >
         <action
-            android:id="@+id/action_sendTmpPassowrdFragment_to_loginFragment"
+            android:id="@+id/action_sendTmpPasswordFragment_to_loginFragment"
             app:destination="@id/loginFragment"
             app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
@@ -102,12 +106,12 @@
         android:label="fragment_employee"
         tools:layout="@layout/fragment_employee" />
     <fragment
-        android:id="@+id/barcodGeneratorFragment"
-        android:name="com.sbrms.BarcodGeneratorFragment"
-        android:label="fragment_barcod_generator"
-        tools:layout="@layout/fragment_barcod_generator" >
+        android:id="@+id/barcodeGeneratorFragment"
+        android:name="com.sbrms.utilities.barcodegenerator.BarcodeGeneratorFragment"
+        android:label="fragment_barcode_generator"
+        tools:layout="@layout/fragment_barcode_generator" >
         <action
-            android:id="@+id/action_barcodGeneratorFragment_to_nav_home"
+            android:id="@+id/action_barcodeGeneratorFragment_to_nav_home"
             app:destination="@id/nav_home" />
     </fragment>
 

@@ -47,7 +47,7 @@ class LoginFragment : Fragment(R.layout.fragment_login){
         }
 
         binding.forgotYourPasswordButton.setOnClickListener {
-            val action = LoginFragmentDirections.actionLoginFragmentToSendTmpPassowrdFragment()
+            val action = LoginFragmentDirections.actionLoginFragmentToSendTmpPasswordFragment()
             findNavController().navigate(action)
         }
 
