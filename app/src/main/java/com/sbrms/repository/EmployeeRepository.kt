@@ -6,13 +6,8 @@ import com.sbrms.model.entity.Employee
 import kotlinx.coroutines.flow.Flow
 
 class EmployeeRepository(private val employeeDao: EmployeeDao) {
-    // Room executes all queries on a separate thread.
-    // Observed Flow will notify the observer when the data has changed.
     val allEmployees: Flow<List<Employee>> = employeeDao.getAllEmployees()
 
-    // By default Room runs suspend queries off the main thread, therefore, we don't need to
-    // implement anything else to ensure we're not doing long running database work
-    // off the main thread.
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
     suspend fun insert(employee: Employee) {
@@ -20,3 +15,6 @@ class EmployeeRepository(private val employeeDao: EmployeeDao) {
     }
 
 }
+
+
+//The above is following the example from this link: https://developer.android.com/codelabs/android-room-with-a-view-kotlin#8
