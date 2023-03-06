@@ -14,7 +14,7 @@ class SendTmpPasswordFragment : Fragment() {
         fun newInstance() = SendTmpPasswordFragment()
     }
 
-    private lateinit var viewModel: SendTmpPassowrdViewModel
+    private lateinit var viewModel: SendTmpPasswordViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +25,7 @@ class SendTmpPasswordFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(SendTmpPassowrdViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(SendTmpPasswordViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

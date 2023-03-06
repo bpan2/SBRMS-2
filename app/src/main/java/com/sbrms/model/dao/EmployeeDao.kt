@@ -15,9 +15,12 @@ interface EmployeeDao {
     @Delete
     suspend fun delete(employee: Employee)
 
+    @Query("DELETE FROM employee_table")
+    suspend fun deleteAll()
+
     @Query("SELECT * FROM employee_table WHERE employeeID = :id")
     fun getEmployee(id: Int): Flow<Employee>
 
-    @Query("SELECT * FROM employee_table")
+    @Query("SELECT * FROM employee_table ORDER BY employeeID ASC")
     fun getAllEmployees(): Flow<List<Employee>>
 }

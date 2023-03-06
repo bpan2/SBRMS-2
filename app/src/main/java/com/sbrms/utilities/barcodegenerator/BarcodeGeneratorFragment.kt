@@ -20,7 +20,7 @@ class BarcodeGeneratorFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    private var mViewModel: BarcodGeneratorViewModel? = null
+    private var mViewModel: BarcodeGeneratorViewModel? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -59,7 +59,7 @@ class BarcodeGeneratorFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         mViewModel = ViewModelProvider(this).get(
-            BarcodGeneratorViewModel::class.java
+            BarcodeGeneratorViewModel::class.java
         )
         // TODO: Use the ViewModel
     }
