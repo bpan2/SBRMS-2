@@ -4,17 +4,18 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.sqlite.db.SupportSQLiteDatabase
 import com.sbrms.model.dao.EmployeeDao
 import com.sbrms.model.entity.Employee
 import com.sbrms.model.entity.Product
+import com.sbrms.utilities.DATABASE_NAME
 
 @Database(entities = [Employee::class, Product::class], version = 1, exportSchema = false)
 public abstract class AppDatabase : RoomDatabase(){
     abstract fun employeeDao() : EmployeeDao
 
+    //The following comes from https://developer.android.com/codelabs/android-room-with-a-view-kotlin#7
     companion object {
-        // Singleton prevents multiple instances of database opening at the
-        // same time.
         @Volatile
         private var INSTANCE: AppDatabase? = null
 
@@ -25,7 +26,7 @@ public abstract class AppDatabase : RoomDatabase(){
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "AppDatabase"
+                    DATABASE_NAME
                 ).build()
                 INSTANCE = instance
                 // return instance
