@@ -3,9 +3,13 @@ package com.sbrms.ui.employee
 import androidx.lifecycle.*
 import com.sbrms.model.entity.Employee
 import com.sbrms.repository.EmployeeRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class EmployeeViewModel(private val repository: EmployeeRepository) : ViewModel() {
+@HiltViewModel
+class EmployeeViewModel @Inject internal constructor(
+    private val repository: EmployeeRepository) : ViewModel() {
     val allEmployees: LiveData<List<Employee>> = repository.allEmployees.asLiveData()
 
     fun insert(employee: Employee) = viewModelScope.launch {
@@ -13,7 +17,8 @@ class EmployeeViewModel(private val repository: EmployeeRepository) : ViewModel(
     }
 }
 
-class WordViewModelFactory(private val repository: EmployeeRepository) : ViewModelProvider.Factory {
+
+class EmployeeViewModelFactory(private val repository: EmployeeRepository) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(EmployeeViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")

@@ -4,11 +4,15 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-parcelize'
     id 'androidx.navigation.safeargs'
-    id 'com.google.dagger.hilt.android'
-    id 'kotlin-kapt'
+
+
 
     //id 'dagger.hilt.android.plugin'
     //id 'com.google.gms.google-services'
+
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+
 }
 
 android {
@@ -42,7 +46,7 @@ android {
         viewBinding true
     }
 
-    compileOptions {
+   compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
@@ -143,20 +147,20 @@ dependencies {
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++
     //Dagger: https://developer.android.com/training/dependency-injection/dagger-android
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    implementation 'com.google.dagger:dagger-android:2.45'
+  /*  implementation 'com.google.dagger:dagger-android:2.45'
     implementation 'com.google.dagger:dagger-android-support:2.45'
     annotationProcessor 'com.google.dagger:dagger-android-processor:2.45'
 
     implementation 'com.google.dagger:dagger:2.45'
-    kapt 'com.google.dagger:dagger-compiler:2.45'
+    kapt 'com.google.dagger:dagger-compiler:2.45'*/
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++
     //Hilt: https://developer.android.com/training/dependency-injection/hilt-android
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    implementation "com.google.dagger:hilt-android:2.44"
-    kapt "com.google.dagger:hilt-compiler:2.44"
+    implementation "com.google.dagger:hilt-android:2.44.2"
+    kapt "com.google.dagger:hilt-compiler:2.44.2"
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
