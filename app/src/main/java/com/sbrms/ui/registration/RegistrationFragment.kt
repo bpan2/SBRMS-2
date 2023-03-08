@@ -11,7 +11,9 @@ import com.sbrms.R
 import com.sbrms.databinding.FragmentLoginBinding
 import com.sbrms.databinding.FragmentRegistrationBinding
 import com.sbrms.ui.login.LoginFragmentDirections
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RegistrationFragment : Fragment(R.layout.fragment_registration) {
     private var _binding: FragmentRegistrationBinding? = null
 
