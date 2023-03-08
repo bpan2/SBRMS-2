@@ -61,6 +61,7 @@
                 android:layout_marginEnd="2dp"
                 android:layout_weight="1"
                 android:hint="John"
+                app:startIconDrawable="@drawable/ic_profile"
                 app:endIconContentDescription="name"
                 app:helperTextEnabled="true">
 
@@ -79,6 +80,7 @@
                 android:layout_marginStart="2dp"
                 android:layout_weight="1"
                 android:hint="Doe"
+                app:startIconDrawable="@drawable/ic_profile"
                 app:endIconContentDescription="name"
                 app:helperTextEnabled="true">
 
@@ -109,6 +111,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="UserName"
+            app:startIconDrawable="@drawable/ic_profile"
             app:endIconContentDescription="name"
             app:helperTextEnabled="true">
 
@@ -167,6 +170,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="johnDoe@gmail.com"
+            app:startIconDrawable="@drawable/ic_email"
             app:endIconContentDescription="name"
             app:helperTextEnabled="true">
 
@@ -209,6 +213,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="phone"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -221,12 +226,14 @@
                 android:layout_marginStart="2dp"
                 android:layout_weight="1"
                 android:hint="111-222-333"
+                app:startIconDrawable="@drawable/ic_phone"
                 app:endIconContentDescription="name"
                 app:helperTextEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="phone"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -330,6 +337,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="2dp"
                 android:layout_weight="1"
+                app:endIconMode="password_toggle"
                 android:hint="*****"
                 app:endIconContentDescription="name"
                 app:helperTextEnabled="true">
@@ -338,6 +346,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColorHint="#757575"
+                    android:inputType="textPassword"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -348,6 +357,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
                 android:layout_weight="1"
+                app:endIconMode="password_toggle"
                 android:hint="******"
                 app:endIconContentDescription="name"
                 app:helperTextEnabled="true">
@@ -356,6 +366,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColorHint="#757575"
+                    android:inputType="textPassword"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
