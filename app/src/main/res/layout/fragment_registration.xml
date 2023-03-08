@@ -29,27 +29,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/firstName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="First Name*" />
-
-            <TextView
-                android:id="@+id/lastName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Last Name*" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:baselineAligned="false">
 
@@ -60,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="2dp"
                 android:layout_weight="1"
-                android:hint="John"
+                android:hint="First Name"
                 app:endIconContentDescription="name"
                 app:helperTextEnabled="true">
 
@@ -78,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
                 android:layout_weight="1"
-                android:hint="Doe"
+                android:hint="Last Name"
                 app:endIconContentDescription="name"
                 app:helperTextEnabled="true">
 
@@ -88,19 +67,6 @@
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/userName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="User Name*" />
         </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -119,18 +85,6 @@
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/employeeID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Emplyee ID*" />
-        </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/employeeIDOutlinedTextField"
@@ -148,174 +102,6 @@
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Email*" />
-        </LinearLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/emailOutlinedTextField"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="johnDoe@gmail.com"
-            app:endIconContentDescription="name"
-            app:helperTextEnabled="true">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/phoneNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Phone Number*" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:baselineAligned="false">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/phoneCodeOutlinedTextField"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="2dp"
-                android:hint="+1"
-                app:endIconContentDescription="name"
-                app:helperTextEnabled="true">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColorHint="#757575"
-                    tools:ignore="TextContrastCheck" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/phoneOutlinedTextField"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:layout_weight="1"
-                android:hint="111-222-333"
-                app:endIconContentDescription="name"
-                app:helperTextEnabled="true">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColorHint="#757575"
-                    tools:ignore="TextContrastCheck" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/address"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Address*" />
-
-            <TextView
-                android:id="@+id/postalCode"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Postal Code*" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:baselineAligned="false">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/addressOutlinedTextField"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="2dp"
-                android:layout_weight="1"
-                android:hint="DownTown"
-                app:endIconContentDescription="name"
-                app:helperTextEnabled="true">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColorHint="#757575"
-                    tools:ignore="TextContrastCheck" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/postalCodeOutlinedTextField"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:layout_weight="1"
-                android:hint="123"
-                app:endIconContentDescription="name"
-                app:helperTextEnabled="true">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColorHint="#757575"
-                    tools:ignore="TextContrastCheck" />
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/password"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Password*" />
-
-            <TextView
-                android:id="@+id/confirmPassword"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Confirm Password*" />
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -330,7 +116,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="2dp"
                 android:layout_weight="1"
-                android:hint="*****"
+                android:hint="Password"
                 app:endIconContentDescription="name"
                 app:helperTextEnabled="true">
 
@@ -348,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
                 android:layout_weight="1"
-                android:hint="******"
+                android:hint="Confirm Password"
                 app:endIconContentDescription="name"
                 app:helperTextEnabled="true">
 
@@ -360,25 +146,12 @@
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/organizationName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Organization Name*" />
-        </LinearLayout>
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/organizationNameOutlinedTextField"
+            android:id="@+id/emailOutlinedTextField"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Organization Name"
+            android:hint="Email"
             app:endIconContentDescription="name"
             app:helperTextEnabled="true">
 
@@ -389,18 +162,60 @@
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phoneNumberOutlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
+            android:hint="Phone Number"
+            app:endIconContentDescription="name"
+            app:helperTextEnabled="true">
 
-            <TextView
-                android:id="@+id/registrationDateID"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Registration Date*" />
-        </LinearLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#757575"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/employeeAddressOutlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            app:endIconContentDescription="name"
+            app:helperTextEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#757575"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/postalCodeOutlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            app:endIconContentDescription="name"
+            app:helperTextEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#757575"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/registrationDateIDOutlinedTextField"
@@ -418,18 +233,6 @@
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/startingDateID"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Starting Date*" />
-        </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/startingDateIDOutlinedTextField"
@@ -447,141 +250,116 @@
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/administratorFlag"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Administrator Flag*" />
-        </LinearLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/administratorFlagOutlinedTextField"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Administrator Flag"
-            app:endIconContentDescription="name"
-            app:helperTextEnabled="true">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/returnAssociateFlag"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Return Associate Flag*" />
-        </LinearLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/returnAssociateFlagOutlinedTextField"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Return Associate Flag"
-            app:endIconContentDescription="name"
-            app:helperTextEnabled="true">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/salesAssociateFlag"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Sales Associate Flag*" />
-        </LinearLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/salesAssociateFlagOutlinedTextField"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Sales Associate Flag"
-            app:endIconContentDescription="name"
-            app:helperTextEnabled="true">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/receivingAssociateFlag"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Receiving Associate Flag*" />
-        </LinearLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/receivingAssociateFlagOutlinedTextField"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Receiving Associate Flag"
-            app:endIconContentDescription="name"
-            app:helperTextEnabled="true">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/ownerFlag"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Owner Flag*" />
-        </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/ownerFlagOutlinedTextField"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Owner Flag"
+            android:hint="isOwner "
+            app:endIconContentDescription="name"
+            app:helperTextEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#757575"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/administratorFlagOutlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="isAdministrator"
+            app:endIconContentDescription="name"
+            app:helperTextEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#757575"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/receivingAssociateFlagOutlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="isReceivingAssociate"
+            app:endIconContentDescription="name"
+            app:helperTextEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#757575"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/salesAssociateFlagOutlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="isSalesAssociate"
+            app:endIconContentDescription="name"
+            app:helperTextEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#757575"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/returnedAssociateFlagOutlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="isReturnAssociate"
+            app:endIconContentDescription="name"
+            app:helperTextEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#757575"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/purchasingAssociateFlagOutlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="isPurchasingAssociate"
+            app:endIconContentDescription="name"
+            app:helperTextEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#757575"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/accountingAssociateFlagOutlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="isAccountingAssociate"
             app:endIconContentDescription="name"
             app:helperTextEnabled="true">
 
@@ -598,7 +376,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/background_dashboard_items"
-            android:text="@string/save"
+            android:text="@string/register"
             android:textStyle="bold"
             android:layout_marginBottom="16dp"
             android:textSize="16sp" />
