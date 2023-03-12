@@ -1,6 +1,7 @@
 package com.sbrms.repository
 
 import androidx.annotation.WorkerThread
+import androidx.lifecycle.MutableLiveData
 import com.sbrms.model.dao.EmployeeDao
 import com.sbrms.model.entity.Employee
 import kotlinx.coroutines.flow.Flow
@@ -11,6 +12,7 @@ class EmployeeRepository @Inject constructor(
     private val employeeDao: EmployeeDao
     ) {
     val allEmployees: Flow<List<Employee>> = employeeDao.getAllEmployees()
+    val currentEmployee = MutableLiveData<Employee>()
 
     @Suppress("RedundantSuspendModifier")
     @WorkerThread

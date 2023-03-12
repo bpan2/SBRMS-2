@@ -33,7 +33,7 @@
             android:title="@string/returned" />
 
         <item
-            android:id="@+id/employeeFragment"
+            android:id="@+id/registrationFragment"
             android:icon="@drawable/ic_portrait"
             android:title="@string/profile" />
 

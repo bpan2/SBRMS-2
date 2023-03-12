@@ -11,8 +11,8 @@ import java.time.LocalDate
 @Parcelize
 data class Employee(
     @PrimaryKey(autoGenerate = true)
-    val employeeID: Int = 0,
-    val userName: String = "999",
+    val employeeID: Int,
+    val userName: String,
     val lastName: String?,
     val firstName: String?,
     val password: String?,

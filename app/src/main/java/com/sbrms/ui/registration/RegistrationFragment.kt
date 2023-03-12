@@ -1,11 +1,14 @@
 package com.sbrms.ui.registration
 
+import android.app.Activity
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.sbrms.R
 import com.sbrms.databinding.FragmentLoginBinding
@@ -15,40 +18,35 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class RegistrationFragment : Fragment(R.layout.fragment_registration) {
-    private var _binding: FragmentRegistrationBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
-    companion object {
-        fun newInstance() = RegistrationFragment()
-    }
 
     private lateinit var viewModel: RegistrationViewModel
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
-        _binding = FragmentRegistrationBinding.inflate(inflater, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        binding.signUpButton.setOnClickListener{
-            val action = RegistrationFragmentDirections.actionRegistrationFragmentToLoginFragment()
-            findNavController().navigate(action)
-        }
-
-        val root: View = binding.root
-
-        return root
-
-        //return inflater.inflate(R.layout.fragment_registration, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(RegistrationViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        val binding = FragmentRegistrationBinding.bind(view)
+
+        binding.apply {
+          /*  employeeIDOutlinedTextField.editText?.setText(viewModel.employeeID.toString())
+            userNameOutlinedTextField.editText?.setText(viewModel.userName)
+            emailOutlinedTextField.editText?.setText(viewModel.email)
+            passwordOutlinedTextField.editText?.setText(viewModel.password)
+          */
+            registerButton.setOnClickListener{
+                /*
+                viewModel.userName = userNameOutlinedTextField.editText?.text.toString()
+                viewModel.email = emailOutlinedTextField.editText?.text.toString()
+                viewModel.password = passwordOutlinedTextField.editText?.text.toString()
+                */
+
+                viewModel.onRegisterBtnClick()
+
+                val action = RegistrationFragmentDirections.actionRegistrationFragmentToLoginFragment()
+                findNavController().navigate(action)
+            }
+        }
     }
 
 }
