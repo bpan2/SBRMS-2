@@ -5,7 +5,7 @@
 
     <data>
         <variable
-            name="viewmodel"
+            name="registerViewModel"
             type="com.sbrms.ui.registration.RegistrationViewModel" />
     </data>
 
@@ -54,7 +54,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@{viewmodel.firstName}"
+                        android:text="@{registerViewModel.firstName}"
                         android:textColorHint="#757575"
                         tools:ignore="TextContrastCheck" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -74,7 +74,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@{viewmodel.lastName}"
+                        android:text="@{registerViewModel.lastName}"
                         android:textColorHint="#757575"
                         tools:ignore="TextContrastCheck" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -93,7 +93,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{viewmodel.userName}"
+                    android:text="@{registerViewModel.userName}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -112,7 +112,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Integer.toString(viewmodel.employeeID)}"
+                    android:text="@{Integer.toString(registerViewModel.employeeID)}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -139,7 +139,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@{viewmodel.password}"
+                        android:text="@{registerViewModel.password}"
                         android:textColorHint="#757575"
                         tools:ignore="TextContrastCheck" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -176,7 +176,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{viewmodel.email}"
+                    android:text="@{registerViewModel.email}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -195,7 +195,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{viewmodel.phoneNumber}"
+                    android:text="@{registerViewModel.phoneNumber}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -214,7 +214,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{viewmodel.employeeAddress}"
+                    android:text="@{registerViewModel.employeeAddress}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -233,7 +233,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{viewmodel.postalCode}"
+                    android:text="@{registerViewModel.postalCode}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -252,7 +252,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{viewmodel.registrationDate}"
+                    android:text="@{registerViewModel.registrationDate}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -271,7 +271,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{viewmodel.startingDate}"
+                    android:text="@{registerViewModel.startingDate}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -290,7 +290,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Boolean.toString(viewmodel.isOwner)}"
+                    android:text="@{Boolean.toString(registerViewModel.isOwner)}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -308,7 +308,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Boolean.toString(viewmodel.isAdmin)}"
+                    android:text="@{Boolean.toString(registerViewModel.isAdmin)}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -326,7 +326,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Boolean.toString(viewmodel.isReceivingStaff)}"
+                    android:text="@{Boolean.toString(registerViewModel.isReceivingStaff)}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -344,7 +344,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Boolean.toString(viewmodel.isSalesStaff)}"
+                    android:text="@{Boolean.toString(registerViewModel.isSalesStaff)}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -362,7 +362,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Boolean.toString(viewmodel.isReturnedStaff)}"
+                    android:text="@{Boolean.toString(registerViewModel.isReturnedStaff)}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -380,7 +380,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Boolean.toString(viewmodel.isPurchasingStaff)}"
+                    android:text="@{Boolean.toString(registerViewModel.isPurchasingStaff)}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -398,7 +398,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Boolean.toString(viewmodel.isAccountingStaff)}"
+                    android:text="@{Boolean.toString(registerViewModel.isAccountingStaff)}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -418,3 +418,5 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.core.widget.NestedScrollView>
 </layout>
+
+    <!--android:onClick="@{() -> registerViewModel.onRegisterBtnClick()}"-->

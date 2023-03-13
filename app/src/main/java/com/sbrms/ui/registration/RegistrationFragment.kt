@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.sbrms.R
@@ -18,31 +19,25 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class RegistrationFragment : Fragment(R.layout.fragment_registration) {
+    private lateinit var binding: FragmentRegistrationBinding
+    private val viewModel: RegistrationViewModel by viewModels()
 
-    private lateinit var viewModel: RegistrationViewModel
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_registration, container, false)
+        return binding.root
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel = ViewModelProvider(this).get(RegistrationViewModel::class.java)
-
-        val binding = FragmentRegistrationBinding.bind(view)
+        binding.registerViewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
 
         binding.apply {
-          /*  employeeIDOutlinedTextField.editText?.setText(viewModel.employeeID.toString())
-            userNameOutlinedTextField.editText?.setText(viewModel.userName)
-            emailOutlinedTextField.editText?.setText(viewModel.email)
-            passwordOutlinedTextField.editText?.setText(viewModel.password)
-          */
             registerButton.setOnClickListener{
-                /*
-                viewModel.userName = userNameOutlinedTextField.editText?.text.toString()
-                viewModel.email = emailOutlinedTextField.editText?.text.toString()
-                viewModel.password = passwordOutlinedTextField.editText?.text.toString()
-                */
-
                 viewModel.onRegisterBtnClick()
-
                 val action = RegistrationFragmentDirections.actionRegistrationFragmentToLoginFragment()
                 findNavController().navigate(action)
             }

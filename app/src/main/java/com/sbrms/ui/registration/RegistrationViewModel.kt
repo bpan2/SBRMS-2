@@ -3,12 +3,9 @@ package com.sbrms.ui.registration
 import androidx.lifecycle.*
 import com.sbrms.model.entity.Employee
 import com.sbrms.repository.EmployeeRepository
-import dagger.assisted.Assisted
-import dagger.assisted.AssistedInject
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import java.time.LocalDate
-import javax.annotation.Nonnull
 import javax.inject.Inject
 
 @HiltViewModel
@@ -19,7 +16,7 @@ class RegistrationViewModel @Inject constructor(
     private val _firstName = MutableLiveData("")
     private val _lastName = MutableLiveData("")
     private val _userName = MutableLiveData("")
-    private val _employeeID = MutableLiveData(0)
+    private val _employeeID = MutableLiveData("")
     private val _password = MutableLiveData("")
     private val _email = MutableLiveData("")
     private val _phoneNumber = MutableLiveData("")
@@ -35,10 +32,10 @@ class RegistrationViewModel @Inject constructor(
     private val _isPurchasingStaff = MutableLiveData(false)
     private val _isAccountingStaff = MutableLiveData(false)
 
-    val firstName: LiveData<String> = _firstName
+    val firstName: LiveData<String>  = _firstName
     val lastName: LiveData<String> = _lastName
     val userName: LiveData<String> = _userName
-    val employeeID: LiveData<Int> = _employeeID
+    val employeeID: LiveData<String> = _employeeID
     val password: LiveData<String> = _password
     val email: LiveData<String> = _email
     val phoneNumber: LiveData<String> = _phoneNumber
@@ -55,12 +52,26 @@ class RegistrationViewModel @Inject constructor(
     val isAccountingStaff: LiveData<Boolean> = _isAccountingStaff
 
     fun onRegisterBtnClick() {
-       /* val newEmployee = Employee(
-            employeeID = employeeID.value?,
-            userName = userName,
-            email = email,
-            password = password)
-        createEmployee(newEmployee)*/
+       val newEmployee = Employee(
+           firstName = firstName.value,
+           lastName = lastName.value,
+           userName = userName.value,
+           employeeID = employeeID.value,
+           password = password.value,
+           email = email.value,
+           phoneNumber = phoneNumber.value,
+           employeeAddress = employeeAddress.value,
+           postalCode = postalCode.value,
+           registrationDate = registrationDate,
+           startingDate = startingDate.value,
+           isOwner = isOwner.value,
+           isAdmin = isAdmin.value,
+           isReceivingStaff = isReceivingStaff.value,
+           isReturnedStaff = isReturnedStaff.value,
+           isPurchasingStaff = isPurchasingStaff.value,
+           isAccountingStaff = isAccountingStaff.value)
+
+        createEmployee(newEmployee)
     }
 
     private fun createEmployee(employee: Employee) = viewModelScope.launch {
