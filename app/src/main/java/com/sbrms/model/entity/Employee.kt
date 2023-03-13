@@ -23,13 +23,13 @@ data class Employee(
     val startingDate: String?,
     val employeeAddress: String?,
     val postalCode: String?,
-    val isOwner: Boolean? = false,
-    val isAdmin: Boolean? = false,
-    val isReceivingStaff: Boolean? = false,
-    val isSalesStaff: Boolean? = false,
-    val isReturnedStaff: Boolean? = false,
-    val isPurchasingStaff: Boolean? = false,
-    val isAccountingStaff: Boolean? = false,
+    val isOwner: String?,
+    val isAdmin: String?,
+    val isReceivingStaff: String? ,
+    val isSalesStaff: String?,
+    val isReturnedStaff: String?,
+    val isPurchasingStaff: String?,
+    val isAccountingStaff: String?
 ) : Parcelable {
    /*
      //val registrationDate: Long = System.currentTimeMillis(),

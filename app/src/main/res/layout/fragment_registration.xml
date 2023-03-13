@@ -55,7 +55,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@{registerViewModel.firstName}"
-                        android:afterTextChanged="@{registerViewModel.updateFirstName}"
+                        android:afterTextChanged="@{registerViewModel::updateFirstName}"
                         android:textColorHint="#757575"
                         tools:ignore="TextContrastCheck" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -76,6 +76,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@{registerViewModel.lastName}"
+                        android:afterTextChanged="@{registerViewModel::updateLastName}"
                         android:textColorHint="#757575"
                         tools:ignore="TextContrastCheck" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -95,6 +96,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@{registerViewModel.userName}"
+                    android:afterTextChanged="@{registerViewModel::updateUserName}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -114,6 +116,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@{registerViewModel.employeeID}"
+                    android:afterTextChanged="@{registerViewModel::updateEmployeeID}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -141,6 +144,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@{registerViewModel.password}"
+                        android:afterTextChanged="@{registerViewModel::updatePassword}"
                         android:textColorHint="#757575"
                         tools:ignore="TextContrastCheck" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -178,6 +182,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@{registerViewModel.email}"
+                    android:afterTextChanged="@{registerViewModel::updateEmail}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -197,6 +202,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@{registerViewModel.phoneNumber}"
+                    android:afterTextChanged="@{registerViewModel::updatePhoneNumber}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -216,6 +222,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@{registerViewModel.employeeAddress}"
+                    android:afterTextChanged="@{registerViewModel::updateEmployeeAddress}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -235,6 +242,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@{registerViewModel.postalCode}"
+                    android:afterTextChanged="@{registerViewModel::updatePostalCode}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -265,7 +273,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Starting Date"
-
                 app:endIconContentDescription="name"
                 app:helperTextEnabled="true">
 
@@ -273,6 +280,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@{registerViewModel.startingDate}"
+                    android:afterTextChanged="@{registerViewModel::updateStartingDate}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -284,14 +292,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="isOwner "
-
                 app:endIconContentDescription="name"
                 app:helperTextEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Boolean.toString(registerViewModel.isOwner)}"
+                    android:text="@{registerViewModel.isOwner}"
+                    android:afterTextChanged="@{registerViewModel::updateIsOwner}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -309,7 +317,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Boolean.toString(registerViewModel.isAdmin)}"
+                    android:text="@{registerViewModel.isAdmin}"
+                    android:afterTextChanged="@{registerViewModel::updateIsAdmin}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -327,7 +336,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Boolean.toString(registerViewModel.isReceivingStaff)}"
+                    android:text="@{registerViewModel.isReceivingStaff}"
+                    android:afterTextChanged="@{registerViewModel::updateIsReceivingStaff}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -345,7 +355,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Boolean.toString(registerViewModel.isSalesStaff)}"
+                    android:text="@{registerViewModel.isSalesStaff}"
+                    android:afterTextChanged="@{registerViewModel::updateIsSalesStaff}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -363,7 +374,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Boolean.toString(registerViewModel.isReturnedStaff)}"
+                    android:text="@{registerViewModel.isReturnedStaff}"
+                    android:afterTextChanged="@{registerViewModel::updateIsReturnedStaff}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -381,7 +393,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Boolean.toString(registerViewModel.isPurchasingStaff)}"
+                    android:text="@{registerViewModel.isPurchasingStaff}"
+                    android:afterTextChanged="@{registerViewModel::updateIsPurchasingStaff}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -399,7 +412,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Boolean.toString(registerViewModel.isAccountingStaff)}"
+                    android:text="@{registerViewModel.isAccountingStaff}"
+                    android:afterTextChanged="@{registerViewModel::updateIsAccountingStaff}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>

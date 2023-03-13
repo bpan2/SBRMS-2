@@ -1,5 +1,6 @@
 package com.sbrms.ui.registration
 
+import android.hardware.biometrics.BiometricManager
 import android.text.Editable
 import android.util.Log
 import android.widget.Toast
@@ -28,13 +29,13 @@ class RegistrationViewModel @Inject constructor(
     private val _postalCode = MutableLiveData("")
     private val _registrationDate: String = LocalDate.now().toString()
     private val _startingDate = MutableLiveData("")
-    private val _isOwner = MutableLiveData(false)
-    private val _isAdmin = MutableLiveData(false)
-    private val _isReceivingStaff = MutableLiveData(false)
-    private val _isSalesStaff = MutableLiveData(false)
-    private val _isReturnedStaff = MutableLiveData(false)
-    private val _isPurchasingStaff = MutableLiveData(false)
-    private val _isAccountingStaff = MutableLiveData(false)
+    private val _isOwner = MutableLiveData("")
+    private val _isAdmin = MutableLiveData("")
+    private val _isReceivingStaff = MutableLiveData("")
+    private val _isSalesStaff = MutableLiveData("")
+    private val _isReturnedStaff = MutableLiveData("")
+    private val _isPurchasingStaff = MutableLiveData("")
+    private val _isAccountingStaff = MutableLiveData("")
 
     val firstName: LiveData<String> = _firstName
     val lastName: LiveData<String> = _lastName
@@ -47,13 +48,14 @@ class RegistrationViewModel @Inject constructor(
     val postalCode : LiveData<String> = _postalCode
     val registrationDate: String = _registrationDate
     val startingDate: LiveData<String> = _startingDate
-    val isOwner: LiveData<Boolean> = _isOwner
-    val isAdmin: LiveData<Boolean> = _isAdmin
-    val isReceivingStaff: LiveData<Boolean> = _isReceivingStaff
-    val isSalesStaff: LiveData<Boolean> = _isSalesStaff
-    val isReturnedStaff: LiveData<Boolean> = _isReturnedStaff
-    val isPurchasingStaff: LiveData<Boolean> = _isPurchasingStaff
-    val isAccountingStaff: LiveData<Boolean> = _isAccountingStaff
+     val isOwner: LiveData<String> = _isOwner
+    val isAdmin: LiveData<String> = _isAdmin
+    val isReceivingStaff: LiveData<String> = _isReceivingStaff
+    val isSalesStaff: LiveData<String> = _isSalesStaff
+    val isReturnedStaff: LiveData<String> = _isReturnedStaff
+    val isPurchasingStaff: LiveData<String> = _isPurchasingStaff
+    val isAccountingStaff: LiveData<String> = _isAccountingStaff
+
 
     //https://stackoverflow.com/questions/70579144/the-expression-cannot-be-inverted-to-be-used-in-a-two-way-binding-in-edittext-e
     /* The only Unfortunately temp solution for the issue that the MutableLiveData variables can't get the values entered via the UI
@@ -72,27 +74,91 @@ class RegistrationViewModel @Inject constructor(
         _firstName.value = s.toString();
     }
 
+    fun updateLastName(s: Editable) {
+        _lastName.value = s.toString();
+    }
+
+    fun updateUserName(s: Editable) {
+        _userName.value = s.toString();
+    }
+
+    fun updateEmployeeID(s: Editable) {
+        _employeeID.value = s.toString();
+    }
+
+    fun updatePassword(s: Editable) {
+        _password.value = s.toString();
+    }
+
+    fun updateEmail(s: Editable) {
+        _email.value = s.toString();
+    }
+
+    fun updatePhoneNumber(s: Editable) {
+        _phoneNumber.value = s.toString();
+    }
+
+    fun updateEmployeeAddress(s: Editable) {
+        _employeeAddress.value = s.toString();
+    }
+
+    fun updatePostalCode(s: Editable) {
+        _postalCode.value = s.toString();
+    }
+
+    fun updateStartingDate(s: Editable) {
+        _startingDate.value = s.toString();
+    }
+
+    fun updateIsOwner(s: Editable) {
+        _isOwner.value = s.toString().trim()
+    }
+
+    fun updateIsAdmin(s: Editable) {
+        _isAdmin.value = s.toString().trim()
+    }
+
+    fun updateIsReceivingStaff(s: Editable) {
+        _isReceivingStaff.value = s.toString().trim()
+    }
+
+    fun updateIsSalesStaff(s: Editable) {
+        _isSalesStaff.value = s.toString().trim()
+    }
+
+    fun updateIsReturnedStaff(s: Editable) {
+        _isReturnedStaff.value = s.toString().trim()
+    }
+
+    fun updateIsPurchasingStaff(s: Editable) {
+        _isPurchasingStaff.value = s.toString().trim()
+    }
+
+    fun updateIsAccountingStaff(s: Editable) {
+        _isAccountingStaff.value = s.toString().trim()
+    }
+
 
     fun onRegisterBtnClick() {
-
        val newEmployee = Employee(
            firstName = _firstName.value,
-           lastName = lastName.value.toString(),
-           userName = userName.value,
-           employeeID = employeeID.value,
-           password = password.value,
-           email = email.value,
-           phoneNumber = phoneNumber.value,
-           employeeAddress = employeeAddress.value,
-           postalCode = postalCode.value,
-           registrationDate = registrationDate,
-           startingDate = startingDate.value,
-           isOwner = isOwner.value,
-           isAdmin = isAdmin.value,
-           isReceivingStaff = isReceivingStaff.value,
-           isReturnedStaff = isReturnedStaff.value,
-           isPurchasingStaff = isPurchasingStaff.value,
-           isAccountingStaff = isAccountingStaff.value)
+           lastName = _lastName.value,
+           userName = _userName.value,
+           employeeID = _employeeID.value,
+           password = _password.value,
+           email = _email.value,
+           phoneNumber = _phoneNumber.value,
+           employeeAddress = _employeeAddress.value,
+           postalCode = _postalCode.value,
+           registrationDate = _registrationDate,
+           startingDate = _startingDate.value,
+           isOwner = _isOwner.value,
+           isAdmin = _isAdmin.value,
+           isReceivingStaff = _isReceivingStaff.value,
+           isSalesStaff = _isSalesStaff.value,
+           isReturnedStaff = _isReturnedStaff.value,
+           isPurchasingStaff = _isPurchasingStaff.value,
+           isAccountingStaff = _isAccountingStaff.value)
 
         createEmployee(newEmployee)
     }
