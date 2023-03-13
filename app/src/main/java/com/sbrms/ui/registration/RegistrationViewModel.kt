@@ -1,5 +1,9 @@
 package com.sbrms.ui.registration
 
+import android.text.Editable
+import android.util.Log
+import android.widget.Toast
+import androidx.databinding.BaseObservable
 import androidx.lifecycle.*
 import com.sbrms.model.entity.Employee
 import com.sbrms.repository.EmployeeRepository
@@ -13,7 +17,7 @@ class RegistrationViewModel @Inject constructor(
     private val repository: EmployeeRepository,
     private val state: SavedStateHandle,
 ) : ViewModel() {
-    private val _firstName = MutableLiveData("")
+    public val _firstName = MutableLiveData("")
     private val _lastName = MutableLiveData("")
     private val _userName = MutableLiveData("")
     private val _employeeID = MutableLiveData("")
@@ -32,7 +36,7 @@ class RegistrationViewModel @Inject constructor(
     private val _isPurchasingStaff = MutableLiveData(false)
     private val _isAccountingStaff = MutableLiveData(false)
 
-    val firstName: LiveData<String>  = _firstName
+    val firstName: LiveData<String> = _firstName
     val lastName: LiveData<String> = _lastName
     val userName: LiveData<String> = _userName
     val employeeID: LiveData<String> = _employeeID
@@ -51,10 +55,29 @@ class RegistrationViewModel @Inject constructor(
     val isPurchasingStaff: LiveData<Boolean> = _isPurchasingStaff
     val isAccountingStaff: LiveData<Boolean> = _isAccountingStaff
 
+    //https://stackoverflow.com/questions/70579144/the-expression-cannot-be-inverted-to-be-used-in-a-two-way-binding-in-edittext-e
+    /* The only Unfortunately temp solution for the issue that the MutableLiveData variables can't get the values entered via the UI
+    2nd approach :
+        If you want to use LiveData then use afterTextChanged to set the value :
+            in ViewModel :
+                fun updateClientUrl(s: Editable) {
+                    _clientUrl.value = s.toString();
+                }
+
+            in XML :
+                android:text="@{viewmodel.clientUrl}"
+                android:afterTextChanged="@{viewmodel.updateClientUrl}"
+    */
+    fun updateFirstName(s: Editable) {
+        _firstName.value = s.toString();
+    }
+
+
     fun onRegisterBtnClick() {
+
        val newEmployee = Employee(
-           firstName = firstName.value,
-           lastName = lastName.value,
+           firstName = _firstName.value,
+           lastName = lastName.value.toString(),
            userName = userName.value,
            employeeID = employeeID.value,
            password = password.value,

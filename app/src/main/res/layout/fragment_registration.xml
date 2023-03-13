@@ -55,6 +55,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@{registerViewModel.firstName}"
+                        android:afterTextChanged="@{registerViewModel.updateFirstName}"
                         android:textColorHint="#757575"
                         tools:ignore="TextContrastCheck" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -112,7 +113,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{Integer.toString(registerViewModel.employeeID)}"
+                    android:text="@{registerViewModel.employeeID}"
                     android:textColorHint="#757575"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
